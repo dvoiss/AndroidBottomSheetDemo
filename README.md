@@ -8,5 +8,5 @@ Since this component was just released it may not be as full featured or reliabl
 * https://github.com/Flipboard/bottomsheet
 * https://github.com/umano/AndroidSlidingUpPanel
 
-![Sample](https://github.com/dvoiss/BottomSheetDemo/blob/master/images/image1.png?raw=true)
-![Sample](https://github.com/dvoiss/BottomSheetDemo/blob/master/images/image2.png?raw=true)
+![Sample](https://github.com/dvoiss/AndroidBottomSheetDemo/blob/master/images/image1.png?raw=true)
+![Sample](https://github.com/dvoiss/AndroidBottomSheetDemo/blob/master/images/image2.png?raw=true)
