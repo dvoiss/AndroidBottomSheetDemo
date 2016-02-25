@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dvoiss.bottomsheetdemo.MainActivity">
+
+    <!-- MAIN CONTENT VIEW -->
+    <LinearLayout
+        android:padding="@dimen/spacing"
+        android:gravity="center"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="@string/bottom_sheet_instruction_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <Button
+            android:layout_marginTop="@dimen/spacing"
+            android:layout_marginBottom="@dimen/spacing"
+            android:id="@+id/toggle_bottom_sheet_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toggle_bottom_sheet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/bottom_sheet_status_text"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/bottom_sheet_status"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5" />
+
+    </LinearLayout>
+
+    <!-- BOTTOM ACTION SHEET -->
+    <!-- Peek height is set to 0dp and is set in code once the sheet-header text's height is determined -->
+    <LinearLayout
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:behavior_peekHeight="0dp"
+        app:behavior_hideable="false"
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/bottom_sheet">
+
+        <!-- BOTTOM SHEET ON-SCREEN CONTENT -->
+        <TextView
+            android:id="@+id/bottom_sheet_header"
+            android:text="@string/bottom_sheet_header_text"
+            android:paddingTop="@dimen/extra_spacing"
+            android:paddingBottom="@dimen/extra_spacing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <!-- BOTTOM SHEET OFF-SCREEN CONTENT -->
+        <LinearLayout
+            android:background="@android:color/white"
+            android:id="@+id/bottom_sheet_content"
+            android:padding="@dimen/spacing"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginBottom="@dimen/spacing"
+                android:text="@string/bottom_sheet_content_text"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"/>
+
+            <!-- BOTTOM SHEET SCROLLING CONTENT -->
+            <android.support.v4.widget.NestedScrollView
+                android:background="@android:color/darker_gray"
+                android:padding="@dimen/spacing"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/bottom_sheet_content_scroll_text"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+
+                    <TextView
+                        android:text="@string/bottom_sheet_content_scroll_text"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+
+                    <TextView
+                        android:text="@string/bottom_sheet_content_scroll_text"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
